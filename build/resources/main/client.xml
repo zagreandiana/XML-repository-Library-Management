@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><clientList>
+    <client id="1">
+        <cnp>1928384758674</cnp>
+        <nume>Ionescu</nume>
+        <prenume>Marin</prenume>
+        <adresa>str Plopilor</adresa>
+        <anulNasterii>1997</anulNasterii>
+    </client>
+    <client id="2">
+        <cnp>1293847589384</cnp>
+        <nume>Popescu</nume>
+        <prenume>Vladimir</prenume>
+        <adresa>str Bicaz</adresa>
+        <anulNasterii>1995</anulNasterii>
+    </client>
+    <client id="3">
+        <cnp>1982738948576</cnp>
+        <nume>Teodorescu</nume>
+        <prenume>Livian</prenume>
+        <adresa>str Paris</adresa>
+        <anulNasterii>1986</anulNasterii>
+    </client>
+    <client id="4">
+        <cnp>1829384756478</cnp>
+        <nume>Teodor</nume>
+        <prenume>Liviu</prenume>
+        <adresa>str Constantei</adresa>
+        <anulNasterii>1980</anulNasterii>
+    </client>
+<client id="5"><cnp>2980678766789</cnp><nume>Marinescu</nume><prenume>Flavia</prenume><adresa>str Plopilor</adresa><anulNasterii>1998</anulNasterii></client></clientList>

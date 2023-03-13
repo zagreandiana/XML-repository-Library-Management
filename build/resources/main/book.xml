@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><bookStore>
+    <book id="1">
+        <titlu>Ion</titlu>
+        <autor>Liviu Rebreanu</autor>
+        <pret>25.0</pret>
+        <editura>Humanitas</editura>
+    </book>
+    <book id="2">
+        <titlu>Fluturi</titlu>
+        <autor>Irina Binder</autor>
+        <pret>21.0</pret>
+        <editura>Paralela45</editura>
+    </book>
+    <book id="3">
+        <titlu>Managementul Riscului</titlu>
+        <autor>Eugen Avram</autor>
+        <pret>30.0</pret>
+        <editura>Humanitas</editura>
+    </book>
+    <book id="4">
+        <titlu>Atomic HabitsL</titlu>
+        <autor>James Clear</autor>
+        <pret>89.0</pret>
+        <editura>Mega</editura>
+    </book>
+    <book id="5">
+        <titlu>Management</titlu>
+        <autor>Ioan Florescu</autor>
+        <pret>34.0</pret>
+        <editura>Humanitas</editura>
+    </book>
+    <book id="6">
+        <titlu>Mara</titlu>
+        <autor>Vasile Vasilescu</autor>
+        <pret>76.0</pret>
+        <editura>Paralela45</editura>
+    </book>
+    <book id="7"><titlu>Ion4</titlu><autor>Liviu</autor><pret>29.0</pret><editura>Humanitas</editura></book>
+    <book id="8"><titlu>Dracula</titlu><autor>Bram Stoker</autor><pret>39.0</pret><editura>Humanitas</editura></book>
+</bookStore>
