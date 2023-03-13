@@ -77,32 +77,9 @@ public class ClientService {
 
 
     }
-//    public void updateClient(String cnp, String nume,String prenume, ArrayList<String> adresa, String anulNasterii) {
-//        Client client = new Client(cnp, nume, prenume, adresa, anulNasterii);
-//        this.ClientIRepository.update(client);
-//
-//    }
-//
-//    public void deleteClient(String cnp) {
-//        this.ClientIRepository.delete(cnp);
-//    }
-//
-//    public String searchClient(String input){
-//        Pattern stringPattern = Pattern.compile(input);
-//        String gasit = "";
-//        for (Client client : ClientIRepository.read()) {
-//            Matcher similaritate = stringPattern.matcher(client.toString());
-//            if(similaritate.find()) {
-//                gasit += client.toString() + "\n";
-//            }
-//        }
-//        return gasit;
-//    }
+    public void updateClient(String cnp, String nume,String prenume, String adresa, int anulNasterii) {
+        Client client = new Client(cnp, nume, prenume, adresa, anulNasterii);
+        this.repository.update(client);
 
-//    public String searchClient(String input) {
-//        return this.ClientIRepository.search(input);
-//    }
-
-
-
+    }
 }

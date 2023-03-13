@@ -24,21 +24,6 @@ public class Main {
     public static void main(String[] args) throws ParseException, ParserConfigurationException, IOException, TransformerException, SAXException {
 
 
-        //in file repo
-//        Validator<Book> bookValidator = new BookValidator();
-//        IRepository<Long, Book> bookRepository = new BookFileRepository(bookValidator, "./src/main/resources/Book");
-//        BookService bookService = new BookService(bookRepository);
-//
-//
-//        Validator<Client> clientValidator = new ClientValidator();
-//        IRepository<Long, Client> clientRepository = new ClientFileRepository(clientValidator, "./src/main/resources/Client");
-//        ClientService clientService = new ClientService(clientRepository);
-//
-//        Validator<Tranzactie> tranzactieValidator = new TranzactieValidator();
-//        IRepository<Long, Tranzactie> tranzactieRepository = new TranzactieFileRepository(tranzactieValidator, "./src/main/resources/Tranzactie");
-//        TranzactieService tranzactieService = new TranzactieService(tranzactieRepository);
-
-
         //xml repo
         Validator<Book> bookValidator = new BookValidator();
         IRepository<Long, Book> bookRepository = new BookXmlRepo(bookValidator, Paths.BOOKXMLPATH.getPath());
@@ -64,48 +49,5 @@ public class Main {
             System.out.println("Unknown error");
 
         }
-
-
-
-
-
-
-        //In Memory Repo
-//        Validator<Book> bookValidator = new BookValidator();
-//        IRepository<Long, Book> bookRepository = new InMemoryRepository<>(bookValidator);
-//        BookService bookService = new BookService(bookRepository);
-////        BookFileRepository bookFileRepository = new BookFileRepository(bookV)
-//
-//
-//        Validator<Client> clientValidator = new ClientValidator();
-//        IRepository<Long, Client> clientRepository = new InMemoryRepository<>(clientValidator);
-//        ClientService clientService = new ClientService(clientRepository);
-//
-//        Validator<Tranzactie> tranzactieValidator = new TranzactieValidator();
-//        IRepository<Long, Tranzactie> tranzactieRepository = new InMemoryRepository<>(tranzactieValidator);
-//        TranzactieService tranzactieService = new TranzactieService(tranzactieRepository);
-//
-//        Console console = new Console(bookService, clientService, tranzactieService);
-//        console.runConsole();
-
-
-//        IRepository<BookFileRepository> bookIRepository = new InMemoryRepository<>();
-//        BookValidator bookValidator = new BookValidator();
-//        BookService bookService= new BookService(bookIRepository, bookValidator);
-//
-//        IRepository<ClientFileRepository> clientIRepository = new InMemoryRepository<>();
-//        ClientValidator clientValidator = new ClientValidator();
-//        ClientService clientService= new ClientService(clientIRepository, clientValidator);
-//
-//        IRepository<Tranzactie> tranzactieIRepository = new InMemoryRepository<>();
-//        TranzactieValidator tranzactieValidator = new TranzactieValidator();
-//        TranzactieService tranzactieService= new TranzactieService(tranzactieIRepository, bookIRepository,clientIRepository, tranzactieValidator);
-//
-//
-//        Console console=new Console(bookService, clientService, tranzactieService);
-//
-//        console.runMenu();
-
-//        System.out.println("bye");
     }
 }

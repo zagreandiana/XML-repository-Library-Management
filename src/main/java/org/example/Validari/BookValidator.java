@@ -13,9 +13,7 @@ public class BookValidator implements Validator<Book> {
         if (entity.getPret() < 1) {
             errors += "Pretul nu poate fi zero\n";
         }
-//        if (book.getId().isEmpty()) {
-//            errors += "Id-ul cartii nu poate fi gol\n";
-//        }
+
         if (entity.getEditura().isEmpty()) {
             errors += "Editura cartii nu poate fi gol\n";
         }

@@ -7,9 +7,7 @@ public class TranzactieValidator implements Validator<Tranzactie>{
     @Override
     public void validate(Tranzactie entity) throws ValidatorException {
         String errors = "";
-//        if (tranzactie.getId().isEmpty()) {
-//            errors += "Id tranzactiei nu poate fi nul. \n";
-//        }
+
         if (entity.getId_book().isEmpty()) {
             errors += "Id-ul cartii nu poate fi nul. \n";
         }

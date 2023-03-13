@@ -15,23 +15,13 @@ import java.util.stream.StreamSupport;
 public class BookService {
     private IRepository<Long, Book> repository;
 
-    private BookValidator bookValidator;
-
-
 
     public BookService(IRepository<Long, Book> repository) {
-//        this.bookIRepository = bookIRepository;
-//        this.bookValidator = bookValidator;
         this.repository = repository;
-//        this.bookFileRepository = bookFileRepository;
 
     }
 
-//    public void addBook( String titlu, String autor, float pret, String editura) {
-//        Book book = new Book(titlu, autor, pret, editura);
-//        this.bookValidator.validateB(book);
-//        this.bookIRepository.create(book);
-//    }
+
     public void addBook(Book book) throws ValidatorException, ParserConfigurationException, IOException, TransformerException, SAXException {
         repository.save(book);
     }
@@ -43,7 +33,6 @@ public class BookService {
     }
 
     public Set<Book> getAllB() {
-//        BookFileRepository();
         Iterable<Book> books = repository.findAll();
         return StreamSupport.stream(books.spliterator(),false).collect(Collectors.toSet());
     }
@@ -84,44 +73,16 @@ public class BookService {
         return bookB;
     }
 
-    public void deleteBook(Long id) {
-        this.repository.delete(id);
-    }
-
-//    public String searchBook(String input) {
-//        Pattern stringPattern = Pattern.compile(input);
-//        String gasit = "";
-//        for (Book book : bookIRepository.read()) {
-//            Matcher similaritate = stringPattern.matcher(book.toString());
-//            if (similaritate.find()) {
-//                gasit += book.toString() + "\n";
-//            }
-//        }
-//        return gasit;
-//    }
-//
-//    public String searchBook(String input) {
-//        return this.bookIRepository.search(input);
-//    }
-
 
     public Set<Book> getListaCartiScumpite(float pragValoare, float procentaj) {
-//        Map<Book, Float> mapCartiScumpite = new HashMap<>();
         float noulPret = 1F;
         float pretNeschimbat = 1F;
-        List<Book> listaFinala = new ArrayList<>();
         for (Book book : this.getAllB()) {
             if (book.getPret() > pragValoare) {
                 noulPret = book.getPret() + (book.getPret() * procentaj) / 100;
 
-//                mapCartiScumpite.put(book, noulPret);
                 book.setPret(noulPret);
-            } else {
-                pretNeschimbat = book.getPret();
-//q!                mapCartiScumpite.put(book, pretNeschimbat);
-                book.setPret(pretNeschimbat);
             }
-
         }
         return getAllB();
     }
