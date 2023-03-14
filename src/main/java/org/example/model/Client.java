@@ -45,21 +45,7 @@ public class Client extends BaseEntity<Long> {
 
     public void setAnulNasterii(int anulNasterii){ this.anulNasterii = anulNasterii;}
 
-//    public void setAnAparitie(String anAparitie) {
-//        this.anulNasterii = anAparitie;
-//    }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (!(o instanceof Client client)) return false;
-//        return Objects.equals(getCnp(), client.getCnp()) && Objects.equals(getNume(), client.getNume()) && Objects.equals(getPrenume(), client.getPrenume()) && Objects.equals(getAdresa(), client.getAdresa()) && Objects.equals(getAnulNasterii(), client.getAnulNasterii());
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(getCnp(), getNume(), getPrenume(), getAdresa(), getAnulNasterii());
-//    }
     @Override
     public String toString() {
         return "Client{" +

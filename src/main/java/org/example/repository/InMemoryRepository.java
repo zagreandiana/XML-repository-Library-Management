@@ -3,11 +3,6 @@ package org.example.repository;
 import org.example.model.BaseEntity;
 import org.example.Validari.Validator;
 import org.example.Validari.ValidatorException;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 

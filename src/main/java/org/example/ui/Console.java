@@ -13,7 +13,6 @@ import javax.xml.transform.TransformerException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.ParseException;
 import java.util.*;
 
 public class Console {
@@ -183,36 +182,36 @@ public class Console {
         System.out.println("filtered books (title containing):");
         String input = scanner.next();
         Set<Book> books = bookService.filterBooksByTitle(input);
-        books.stream().forEach(System.out::println);
+        books.forEach(System.out::println);
     }
 
     private void handleFilterClients() {
         System.out.println("filtered clients (name containing):");
         String input = scanner.next();
         Set<Client> clients = clientService.filterClientsByName(input);
-        clients.stream().forEach(System.out::println);
+        clients.forEach(System.out::println);
     }
 
     private void handleFilterTranzactions() {
         System.out.println("filtered tranzactions (nr of pieces):");
         int input = scanner.nextInt();
         Set<Tranzactie> tranzactions = tranzactieService.filterTranzactieByNrPieces(input);
-        tranzactions.stream().forEach(System.out::println);
+        tranzactions.forEach(System.out::println);
     }
 
     private void handlePrintAllBooks() {
         Set<Book> books = bookService.getAllB();
-        books.stream().forEach(System.out::println);
+        books.forEach(System.out::println);
     }
 
     private void handlePrintAllClients() {
         Set<Client> clients = clientService.getAllC();
-        clients.stream().forEach(System.out::println);
+        clients.forEach(System.out::println);
     }
 
     private void handlePrintAllTranzactions() {
         Set<Tranzactie> tranzactions = tranzactieService.getAllT();
-        tranzactions.stream().forEach(System.out::println);
+        tranzactions.forEach(System.out::println);
     }
 
     private void handleAddBooks() {
@@ -235,9 +234,6 @@ public class Console {
 
     private void handleUpdateBook() {
         try {
-            System.out.println("Introduceti id-ul cartii: ");
-            String id = this.scanner.next();
-
             System.out.println("Introduceti titlul cartii: ");
             String titlu = this.scanner.next();
 
@@ -349,7 +345,7 @@ public class Console {
                 float pragValoare = Float.parseFloat(this.scanner.next());
                 System.out.println("Introduceti procentajul cu care vor fi scumpite cartile %: ");
                 float procentaj = Float.parseFloat(this.scanner.next());
-                System.out.println(bookService.getListaCartiScumpite(pragValoare, procentaj));
+                System.out.println(bookService.increasingBooksPrice(pragValoare, procentaj));
 
             } catch (Exceptie e) {
                 System.out.println(e.getMessage());

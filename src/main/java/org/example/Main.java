@@ -9,16 +9,11 @@ import org.example.model.Book;
 import org.example.model.Client;
 import org.example.model.Tranzactie;
 import org.example.repository.*;
-import org.xml.sax.SAXException;
 import org.example.service.BookService;
 import org.example.service.ClientService;
 import org.example.service.TranzactieService;
 import org.example.ui.Console;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-import java.io.IOException;
-import java.text.ParseException;
 
 public class Main {
     public static void main(String[] args) {

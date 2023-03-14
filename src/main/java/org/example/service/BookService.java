@@ -91,11 +91,10 @@ public class BookService {
 
     public Set<Book> increasingBooksPrice(float pragValoare, float procentaj) {
         float procentajFactor = 1F + (procentaj / 100F);
-        Set<Book> allBooks = getAllB().stream()
+        return getAllB().stream()
                 .filter(book -> book.getPret() > pragValoare)
                 .peek(book -> book.setPret(book.getPret() * procentajFactor))
                 .collect(Collectors.toSet());
-        return allBooks;
     }
 }
 

@@ -56,17 +56,7 @@ public class Tranzactie extends BaseEntity<Long> {
         return dataSiOra;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (!(o instanceof Tranzactie that)) return false;
-//        return getNrBucati() == that.getNrBucati() && Objects.equals(getId_book(), that.getId_book()) && Objects.equals(getId_client(), that.getId_client()) && Objects.equals(getDataSiOra(), that.getDataSiOra());
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(getId_book(), getId_client(), getNrBucati(), getDataSiOra());
-//    }
+
 
     @Override
     public String toString() {
