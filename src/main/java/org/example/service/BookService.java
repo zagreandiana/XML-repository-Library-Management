@@ -76,11 +76,9 @@ public class BookService {
 
     public Set<Book> getListaCartiScumpite(float pragValoare, float procentaj) {
         float noulPret = 1F;
-        float pretNeschimbat = 1F;
         for (Book book : this.getAllB()) {
             if (book.getPret() > pragValoare) {
                 noulPret = book.getPret() + (book.getPret() * procentaj) / 100;
-
                 book.setPret(noulPret);
             }
         }

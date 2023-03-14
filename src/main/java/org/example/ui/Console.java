@@ -179,18 +179,6 @@ public class Console {
     }
 
 
-//
-//    private void handleDeleteTranzactie() {
-//        try {
-//            System.out.println("Dati id-ul tranzactiei:");
-//            String id = this.scanner.next();
-//            this.tranzactieService.deleteTranzactie(id);
-//        } catch (RuntimeException e) {
-//            System.out.println(e.getMessage());
-//        }
-//    }
-
-
     private void handleFilterBooks() {
         System.out.println("filtered books (title containing):");
         String input = scanner.next();
@@ -268,8 +256,6 @@ public class Console {
             System.out.println(e.getMessage());
         }
     }
-
-
 
 
     private void handleAddClients() {
