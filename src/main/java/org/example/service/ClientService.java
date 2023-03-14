@@ -64,11 +64,11 @@ public class ClientService {
         return StreamSupport.stream(clients.spliterator(),false).collect(Collectors.toSet());
     }
 
-    public Set<Client> filterClientsByName(String c) {
+    public Set<Client> filterClientsByName(String input) {
         Iterable<Client> clients = repository.findAll();
         Set<Client> filterClients = new HashSet<>();
         clients.forEach(filterClients::add);
-        filterClients.removeIf(client -> !client.getNume().contains(c));
+        filterClients.removeIf(client -> !client.getNume().contains(input));
         return filterClients;
     }
 

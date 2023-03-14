@@ -28,14 +28,11 @@ public class BookXmlRepo extends InMemoryRepository<Long, Book> {
     private String Book;
 
 
-
     public BookXmlRepo(Validator<Book> validator, String Book)  {
         super(validator);
         this.Book = Book;
 
         loadData();
-
-
 
     }
 

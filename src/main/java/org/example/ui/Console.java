@@ -123,23 +123,6 @@ public class Console {
                             break;
                     }
                     break;
-//                case "6":
-//                    this.subMenu6();
-//                    String target6 = scanner.next();
-//                    switch (target6) {
-//                        case "1":
-//                            handleBookXml();
-//                            break;
-//                        case "2":
-//                            handleClientXml();
-//                            break;
-//                        case "3":
-//                            handleTranzactieXml();
-//                            break;
-//                    }
-//                    break;
-
-
                 default:
                     System.out.println("Invalid option");
             }
@@ -148,18 +131,7 @@ public class Console {
 
     }
 
-//    private  void handleClientXml() throws ParserConfigurationException, IOException, TransformerException, SAXException{
-//        clientXmlRepo.xmlClient();
-//    }
-//    private void handleBookXml() throws ParserConfigurationException, IOException, TransformerException, SAXException {
-//        bookXmlRepo.xmlBook();
-//
-//    }
-//
-//    private void handleTranzactieXml() throws ParserConfigurationException, IOException, TransformerException, SAXException {
-//        tranzactieXmlRepo.xmlTranzactie();
-//
-//    }
+
     private void handleMostExpensiveBook() {
         bookService.mostExpensiveBook();
 
@@ -220,20 +192,23 @@ public class Console {
 
 
     private void handleFilterBooks() {
-        System.out.println("filtered books (name containing 'a'):");
-        Set<Book> books = bookService.filterBooksByTitle("a");
+        System.out.println("filtered books (title containing):");
+        String input = scanner.next();
+        Set<Book> books = bookService.filterBooksByTitle(input);
         books.stream().forEach(System.out::println);
     }
 
     private void handleFilterClients() {
-        System.out.println("filtered clients (name containing 'o'):");
-        Set<Client> clients = clientService.filterClientsByName("o");
+        System.out.println("filtered clients (name containing):");
+        String input = scanner.next();
+        Set<Client> clients = clientService.filterClientsByName(input);
         clients.stream().forEach(System.out::println);
     }
 
     private void handleFilterTranzactions() {
-        System.out.println("filtered tranzactions (nr of pieces 1):");
-        Set<Tranzactie> tranzactions = tranzactieService.filterTranzactieByNrPieces(1);
+        System.out.println("filtered tranzactions (nr of pieces):");
+        int input = scanner.nextInt();
+        Set<Tranzactie> tranzactions = tranzactieService.filterTranzactieByNrPieces(input);
         tranzactions.stream().forEach(System.out::println);
     }
 
@@ -445,12 +420,4 @@ public class Console {
                     "4-Most expensive book\n"+
                     "x-Exit");
         }
-
-        private void subMenu6(){
-            System.out.println("1-Book XML" +"\n"+
-                    "2-Client XML" +"\n"+
-                    "3-Tranzactie XML" +"\n"+
-                    "x-Exit");
-        }
-
     }

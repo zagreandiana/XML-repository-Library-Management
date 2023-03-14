@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.text.ParseException;
 
 public class Main {
-    public static void main(String[] args) throws ParseException, ParserConfigurationException, IOException, TransformerException, SAXException {
+    public static void main(String[] args) {
 
 
         //xml repo

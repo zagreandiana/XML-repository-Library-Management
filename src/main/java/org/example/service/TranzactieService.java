@@ -32,12 +32,12 @@ public class TranzactieService {
         return StreamSupport.stream(tranzactions.spliterator(),false).collect(Collectors.toSet());
     }
 
-    public Set<Tranzactie> filterTranzactieByNrPieces(int i) {
+    public Set<Tranzactie> filterTranzactieByNrPieces(int input) {
         Iterable<Tranzactie> tranzactions = repository.findAll();
 
         Set<Tranzactie> filterTranzactions = new HashSet<>();
         tranzactions.forEach(filterTranzactions::add);
-        filterTranzactions.removeIf(tranzactie ->tranzactie.getNrBucati() != i);
+        filterTranzactions.removeIf(tranzactie ->tranzactie.getNrBucati() != input);
         return filterTranzactions;
     }
 

@@ -38,12 +38,12 @@ public class BookService {
     }
 
 
-    public Set<Book> filterBooksByTitle(String b) {
+    public Set<Book> filterBooksByTitle(String input) {
         Iterable<Book> books = repository.findAll();
 
         Set<Book> filteredBooks= new HashSet<>();
         books.forEach(filteredBooks::add);
-        filteredBooks.removeIf(book -> !book.getTitlu().contains(b));
+        filteredBooks.removeIf(book -> !book.getTitlu().contains(input));
         return filteredBooks;
     }
 
