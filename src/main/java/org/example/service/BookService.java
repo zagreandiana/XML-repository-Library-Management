@@ -73,16 +73,29 @@ public class BookService {
         return bookB;
     }
 
+// the classic variant for increasingBooksPrice method
 
-    public Set<Book> getListaCartiScumpite(float pragValoare, float procentaj) {
-        float noulPret = 1F;
-        for (Book book : this.getAllB()) {
-            if (book.getPret() > pragValoare) {
-                noulPret = book.getPret() + (book.getPret() * procentaj) / 100;
-                book.setPret(noulPret);
-            }
-        }
-        return getAllB();
+//    public Set<Book> getListaCartiScumpite(float pragValoare, float procentaj) {
+//        float noulPret = 1F;
+//        for (Book book : this.getAllB()) {
+//            if (book.getPret() > pragValoare) {
+//                noulPret = book.getPret() + (book.getPret() * procentaj) / 100;
+//                book.setPret(noulPret);
+//            }
+//        }
+//        return getAllB();
+//    }
+
+
+//   increasingBooksPrice method with stream
+
+    public Set<Book> increasingBooksPrice(float pragValoare, float procentaj) {
+        float procentajFactor = 1F + (procentaj / 100F);
+        Set<Book> allBooks = getAllB().stream()
+                .filter(book -> book.getPret() > pragValoare)
+                .peek(book -> book.setPret(book.getPret() * procentajFactor))
+                .collect(Collectors.toSet());
+        return allBooks;
     }
 }
 
